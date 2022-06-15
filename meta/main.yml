@@ -11,5 +11,15 @@ galaxy_info:
     - mysql
     - mariadb
 
+  platforms:
+    - name: Debian
+      versions:
+        - buster
+        - bullseye
+    - name: Ubuntu
+      versions:
+        - focal
+        - jammy
+
 dependencies: []
 

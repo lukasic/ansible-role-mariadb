@@ -4,6 +4,19 @@ Role Name
 Simple Ansible MariaDB Role.
 
 
+Changelog
+---------
+
+1.1.0
+
+* Support Debian Bullseye and Ubuntu Jammy
+* Add changelog
+
+1.0.0
+
+* Ansible Role for Debian Buster and Ubuntu Focal
+
+
 Installation
 ------------
 
@@ -22,7 +35,8 @@ Using `requirements.yml`:
 Requirements
 ------------
 
-Debian Buster.
+Debian Buster / Ubuntu Focal or higher.
+
 
 Role Variables
 --------------
