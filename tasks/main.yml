@@ -1,4 +1,12 @@
 ---
+
+- name: include vars
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution }}_{{ ansible_distribution_release }}.yml"
+    - "{{ ansible_distribution }}.yml"
+    - "{{ ansible_os_family }}.yml"
+
 - name: Install mariadb-server
   apt:
     pkg: mariadb-server
@@ -13,7 +21,7 @@
 
 - name: Install pymysql
   apt:
-    pkg: python-pymysql
+    pkg: "{{ pymysql_pkg }}"
     state: present
     update_cache: yes
 
